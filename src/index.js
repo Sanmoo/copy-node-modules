@@ -136,9 +136,7 @@ function copyNodeModules(srcDir, dstDir, opts, callback) {
   if (gOpts.devDependencies) {
     Object.keys(pkgContent.devDependencies).forEach((name) => {
       version = pkgContent.devDependencies[name];
-      if (!version.startsWith('file:')) {
-        rootPkgList.push({ name, version });
-      }
+      rootPkgList.push({ name, version });
     });
   }
 
